@@ -1,0 +1,509 @@
+Last login: Thu Jun 12 14:40:25 on ttys001
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % GIT
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git config --global user.name "DeepakVeerappan"
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git config --global user.email "veerappandeepak@gmail.com"
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git config --global init.defaultbranch main
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git config --global core.autocrlf input
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git config --global core.editor "nano -w"
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git config --list     
+credential.helper=osxkeychain
+init.defaultbranch=main
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=DeepakVeerappan
+user.email=veerappandeepak@gmail.com
+init.defaultbranch=main
+core.autocrlf=input
+core.editor=nano -w
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % git -h 
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 ~ % cd desktop
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 desktop % cd~/desktop
+zsh: no such file or directory: cd~/desktop
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 desktop % nano ~/.bashrc  
+(base) deepakveerappan@newhuaweiapstaff-10-56-23-148 desktop % source ~/.bashrc
+
+DVMAC: desktop % cd recipes
+cd: no such file or directory: recipes
+DVMAC: desktop % cd recipes
+DVMAC: recipes % cd ..
+DVMAC: desktop % cd recipes
+DVMAC: recipes % git init
+Initialized empty Git repository in /Users/deepakveerappan/Desktop/recipes/.git/
+DVMAC: recipes % ls
+DVMAC: recipes % ls -l
+total 0
+DVMAC: recipes % ls -a
+.	..	.git
+DVMAC: recipes % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+DVMAC: recipes % mkdir cocktails
+DVMAC: recipes % git init
+Reinitialized existing Git repository in /Users/deepakveerappan/Desktop/recipes/.git/
+DVMAC: recipes % cd cocktails 
+DVMAC: cocktails % ls -a
+.	..
+DVMAC: cocktails % rm .git
+rm: .git: No such file or directory
+DVMAC: cocktails % rm .r .git
+rm: .r: No such file or directory
+rm: .git: No such file or directory
+DVMAC: cocktails % cd ..    
+DVMAC: recipes % nano peasoup.md
+DVMAC: recipes % cat peasoup.md 
+#Ingredients
+# Instructions
+
+DVMAC: recipes % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	peasoup.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+DVMAC: recipes % git add peasoup.md
+DVMAC: recipes % ls
+cocktails	peasoup.md
+DVMAC: recipes % touch new_file.md
+DVMAC: recipes % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   peasoup.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	new_file.md
+
+DVMAC: recipes % rm new_file.md 
+DVMAC: recipes % git status    
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   peasoup.md
+
+DVMAC: recipes % git commit -m "Create a template for recipes"
+[main (root-commit) 5aabddd] Create a template for recipes
+ 1 file changed, 3 insertions(+)
+ create mode 100644 peasoup.md
+DVMAC: recipes % git log
+commit 5aabddd0c26fff09eb5dc541b73f21abe515c0fb (HEAD -> main)
+Author: DeepakVeerappan <veerappandeepak@gmail.com>
+Date:   Tue Jun 17 10:20:47 2025 +0100
+
+    Create a template for recipes
+DVMAC: recipes % ls
+cocktails	peasoup.md
+DVMAC: recipes % ls -a
+.		..		.git		cocktails	peasoup.md
+DVMAC: recipes % cd cocktails 
+DVMAC: cocktails % mkdir tiger.txt
+DVMAC: cocktails % cd ..
+DVMAC: recipes % ls -a          
+.		..		.git		cocktails	peasoup.md
+DVMAC: recipes % nano peasoup.md 
+DVMAC: recipes % git status                                   
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   peasoup.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DVMAC: recipes % cat peasoup.md                               
+#Ingredients
+-peas
+-onions
+-potatoes
+# Instructions
+#
+DVMAC: recipes % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   peasoup.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DVMAC: recipes % git diff 
+diff --git a/peasoup.md b/peasoup.md
+index 8e3d183..daedee8 100644
+--- a/peasoup.md
++++ b/peasoup.md
+@@ -1,3 +1,6 @@
+ #Ingredients
++-peas
++-onions
++-potatoes
+ # Instructions
+-
++#
+DVMAC: recipes % git status    
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   peasoup.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DVMAC: recipes % git commit -m "add basic ingredients for pea soup"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   peasoup.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DVMAC: recipes % git add peasoup.md
+DVMAC: recipes % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   peasoup.md
+
+DVMAC: recipes % git commit -m "add basic ingredients for pea soup"
+[main 023371e] add basic ingredients for pea soup
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+DVMAC: recipes % nano peasoup.md                                   
+DVMAC: recipes % git giff
+git: 'giff' is not a git command. See 'git --help'.
+
+The most similar command is
+	diff
+DVMAC: recipes % git diff
+diff --git a/peasoup.md b/peasoup.md
+index daedee8..b1dcbed 100644
+--- a/peasoup.md
++++ b/peasoup.md
+@@ -3,4 +3,4 @@
+ -onions
+ -potatoes
+ # Instructions
+-#
++#tea
+DVMAC: recipes % git add peasoup.md 
+DVMAC: recipes % git diff 
+DVMAC: recipes % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   peasoup.md
+
+DVMAC: recipes % git dif --stage
+git: 'dif' is not a git command. See 'git --help'.
+
+The most similar commands are
+	diff
+	config
+	difftool
+	init
+DVMAC: recipes % git diff --stage
+error: invalid option: --stage
+DVMAC: recipes % git diff --staged
+diff --git a/peasoup.md b/peasoup.md
+index daedee8..b1dcbed 100644
+--- a/peasoup.md
++++ b/peasoup.md
+@@ -3,4 +3,4 @@
+ -onions
+ -potatoes
+ # Instructions
+-#
++#tea
+DVMAC: recipes % git commit -m "Mofify peasoup to use differernt onions"
+[main 4d9f547] Mofify peasoup to use differernt onions
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+DVMAC: recipes % git log
+commit 4d9f547f1204318cd027fe0c73bb0dd92ca82d39 (HEAD -> main)
+Author: DeepakVeerappan <veerappandeepak@gmail.com>
+Date:   Tue Jun 17 10:46:43 2025 +0100
+
+    Mofify peasoup to use differernt onions
+
+commit 023371ed6feaf57b7eaaae9fa76a3a535c637c17
+Author: DeepakVeerappan <veerappandeepak@gmail.com>
+Date:   Tue Jun 17 10:39:29 2025 +0100
+
+    add basic ingredients for pea soup
+
+commit 5aabddd0c26fff09eb5dc541b73f21abe515c0fb
+Author: DeepakVeerappan <veerappandeepak@gmail.com>
+Date:   Tue Jun 17 10:20:47 2025 +0100
+
+    Create a template for recipes
+DVMAC: recipes % git log --online
+fatal: unrecognized argument: --online
+DVMAC: recipes % git log --oneline
+4d9f547 (HEAD -> main) Mofify peasoup to use differernt onions
+023371e add basic ingredients for pea soup
+5aabddd Create a template for recipes
+DVMAC: recipes % mkdir cakes
+DVMAC: recipes % ls
+cakes		cocktails	peasoup.md
+DVMAC: recipes % git status
+On branch main
+nothing to commit, working tree clean
+DVMAC: recipes % git add cakes 
+DVMAC: recipes % git status
+On branch main
+nothing to commit, working tree clean
+DVMAC: recipes % cd cakes 
+DVMAC: cakes % touch .gitkeep
+DVMAC: cakes % ls
+DVMAC: cakes % ls -a
+.		..		.gitkeep
+DVMAC: cakes % cd ..
+DVMAC: recipes % git status    
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cakes/
+
+nothing added to commit but untracked files present (use "git add" to track)
+DVMAC: recipes % cd cakes 
+DVMAC: cakes % mkdir brownie_cakes
+DVMAC: cakes % cd brownie_cakes 
+DVMAC: brownie_cakes % touch lemon_drizzle
+DVMAC: brownie_cakes % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../
+
+nothing added to commit but untracked files present (use "git add" to track)
+DVMAC: brownie_cakes % git add ../../cakes
+DVMAC: brownie_cakes % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   ../.gitkeep
+	new file:   lemon_drizzle
+
+DVMAC: brownie_cakes % git commit -m "Add some initial cakes"
+[main 412bc39] Add some initial cakes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cakes/.gitkeep
+ create mode 100644 cakes/brownie_cakes/lemon_drizzle
+DVMAC: brownie_cakes % git status
+On branch main
+nothing to commit, working tree clean
+DVMAC: brownie_cakes % cd ..    
+DVMAC: cakes % cd ..
+DVMAC: recipes % nano peasoup.md 
+DVMAC: recipes % touch groceries.md
+DVMAC: recipes % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   peasoup.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	groceries.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+DVMAC: recipes % git add -m "tea and biscuit added to peasoup"
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+DVMAC: recipes % git add peasoup.md 
+DVMAC: recipes % git add groceries.md 
+DVMAC: recipes % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   groceries.md
+	modified:   peasoup.md
+
+DVMAC: recipes % git commit -m "groceries list included"
+[main 0b23d42] groceries list included
+ 2 files changed, 1 insertion(+)
+ create mode 100644 groceries.md
+DVMAC: recipes % nano peasoup.md 
+DVMAC: recipes % git add peasoup.md                     
+DVMAC: recipes % git status                             
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   peasoup.md
+
+DVMAC: recipes % git commit -m "groceries list and prices included"
+[main 3422b06] groceries list and prices included
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+DVMAC: recipes % touch tiger.pdf
+DVMAC: recipes % ls
+cakes		cocktails	groceries.md	peasoup.md	tiger.pdf
+DVMAC: recipes % nano tiger.pdf 
+DVMAC: recipes %  
